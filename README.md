@@ -22,7 +22,8 @@ These instructions will get you a copy of the project up and running on your loc
 #### Install Docker and a MQTT brocker
 
 You need to have [Docker](https://docs.docker.com/get-docker/) and a [Mqtt brocker](https://mosquitto.org/) installed.
-installations procedures are not developped here.
+
+Installations procedures are not developped here.
 
 #### Create a free account on [Responsive Voice](https://responsivevoice.org/)
 
@@ -35,15 +36,15 @@ After login, find the panel "your site code", the key is on the right : "key=XXX
 
 Create the file config.ini and add informations according to your own need:
 * LISTEN_TOPIC is the mqtt topic to send the message you want to TTS
-* STATUS_TOPIC= is the mqtt topic of the stae of the gateway ("Online","Offline")
+* STATUS_TOPIC is the mqtt topic of the stae of the gateway ("Online","Offline")
 * PUBLISH_TOPIC is the topic published with the mp3 link of the TTS file
 * MQTT_ADRESS is the IP adress of the mqtt brocker
 * MQTT_PORT is the port number of the mqtt brocker (default=1883)
 * MQTT_LOGIN is the login of the mqtt brocker
-* MQTT_PASS= is the of password the mqtt brocker
+* MQTT_PASS is the of password the mqtt brocker
 * HTTP_IP is the ip adress of the local web server (Docker host) used for link playback (ex: http://192.168.1.62:8000/3069301452616694024.mp3)
 * HTTP_PORT is the port of the local web server
-* TTS_LANG is language of the TTS (not used yet)
+* TTS_LANG is the language of the TTS (not used yet)
 * TTS_GENDER is the gender of the TTS language (not used yet)
 * RVOICE_KEY=XXXXXXXX is your Responsive Voice server Key.
 
@@ -79,13 +80,13 @@ topic : /tts/lienmp3
 payload: http://192.168.1.62:8000/-7524597403686428361.mp3
 ```
 
-You just have to pass the url link to your home automaition system for playback on your sound device.
+You just have to pass the url link to your home automation system for playback on your sound device.
 
 ## Deployment
 
 ### Docker
 
-if you the server port is  8000 in your config.ini file, run the command below:
+if you the server port is 8000 in your config.ini file, run the command below or adapt the port number in the command to your need:
 
 ```shell
 
