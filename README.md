@@ -87,7 +87,7 @@ You just have to pass the url link to your home automation system for playback o
 
 ### Docker
 
-if you the server port is 8000 in your config.ini file, run the command below or adapt the port number in the command to your need:
+if the server port is 8000 in your config.ini file, run the command below or adapt the port number in the command line to your need:
 
 ```shell
 sudo docker run --env-file config.ini -p 8000:8000 --restart=unless-stopped --name RVoiceServer yvonindel/rvoiceserver:v1.0
