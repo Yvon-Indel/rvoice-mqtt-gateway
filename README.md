@@ -27,14 +27,15 @@ Installations procedures are not developped here.
 
 #### Create a free account on [Responsive Voice](https://responsivevoice.org/)
 
-You need to create a free account on the website to get your own server key.
+You need to create a free account on the website in order to get your own server key.
 
 After login, find the panel "your site code", the key is on the right : "key=XXXXXXX" 
 
 
 ## Configuration
 
-Create the file config.ini and add informations according to your own need:
+Create the file "config.ini" and add informations inside according to your own need:
+
 * LISTEN_TOPIC is the mqtt topic to send the message you want to TTS
 * STATUS_TOPIC is the mqtt topic of the stae of the gateway ("Online","Offline")
 * PUBLISH_TOPIC is the topic published with the mp3 link of the TTS file
@@ -56,7 +57,7 @@ STATUS_TOPIC=/tts/connect
 PUBLISH_TOPIC=/tts/lienmp3
 MQTT_ADRESS=192.168.1.27
 MQTT_PORT=1883
-MQTT_LOGIN=mqtt
+MQTT_LOGIN=loginmqtt
 MQTT_PASS=123456
 HTTP_IP=192.168.1.62
 HTTP_PORT=8000
@@ -89,11 +90,12 @@ You just have to pass the url link to your home automation system for playback o
 if you the server port is 8000 in your config.ini file, run the command below or adapt the port number in the command to your need:
 
 ```shell
-
+sudo docker run --env-file config.ini -p 8000:8000 --restart=unless-stopped --name RVoiceServer yvonindel/rvoiceserver:v1.0
 ```
    
-## To do
-Only FRENCH language is working now. I have to add other language.
+## To do list
+Only FRENCH language is working now. Don't know why.
+Sometime the gender is not working. Seems to be an Responsive Voice issue.
 
 ## Authors
 
