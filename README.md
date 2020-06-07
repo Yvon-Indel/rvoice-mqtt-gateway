@@ -103,4 +103,4 @@ It's my own code, based on the work of this github repo:
 
 ## License
 
-[GPL3-0](https://github.com/Yvon-Indel/rvoice-mqtt-gateway/blob/master/LICENCE)
+[GPL3-0](https://github.com/Yvon-Indel/rvoice-mqtt-gateway/blob/master/LICENSE)
