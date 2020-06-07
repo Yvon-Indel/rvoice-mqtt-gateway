@@ -1,5 +1,3 @@
-Work still in progress...
-
 # rvoice-mqtt-gateway
 
 A  Python script which provides a [Responsive Voice](https://responsivevoice.org/) TTS to MQTT gateway for my own use with [Home Assistant](https://www.home-assistant.io/docs/)
