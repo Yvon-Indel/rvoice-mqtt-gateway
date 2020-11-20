@@ -81,6 +81,8 @@ payload: http://192.168.1.62:8000/-7524597403686428361.mp3
 
 You just have to pass the url link to your home automation system for playback on your sound device.
 
+If you are using Home Assistant, you can use my [rvoice-ha-integration](https://github.com/Yvon-Indel/rvoice-ha-integration)
+
 ## Deployment
 
 ### Docker
